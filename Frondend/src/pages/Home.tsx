@@ -50,14 +50,14 @@ const Home = () => {
       </section>
 
       {/* ===================== BLOCS TRAITEUR / CAFÉ ===================== */}
-      <section className="flex flex-col md:flex-row w-full ">
+      <section className="flex flex-col md:flex-row w-full  gap-5 px-6 md:px-16 py-16 ">
         {/* ===== BLOC TRAITEUR ===== */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           whileHover={{ scale: 1.03 }}
-          className="flex-1 relative flex h-[420px] md:h-full  overflow-hidden shadow-2xl theme-traiteur"
+          className="flex-1 relative flex h-[420px] md:h-[50%]  overflow-hidden shadow-2xl theme-traiteur rounded-4xl"
         >
           <img
             src="/images/traiteur.jpg"
@@ -89,41 +89,33 @@ const Home = () => {
         </motion.div>
 
         {/* ===== BLOC CAFETERIAS ===== */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          whileHover={{ scale: 1.03 }}
-          className="flex-1 relative flex h-[420px] md:h-full overflow-hidden shadow-2xl theme-cafe"
-        >
-          <img
-            src="/images/cafeteria.jpg"
-            className="w-full h-full object-cover"
-          />
+        <Link to="/cafeterias">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            whileHover={{ scale: 1.03 }}
+            className="flex-1 relative flex h-[420px] md:h-[50%] overflow-hidden shadow-2xl theme-cafe rounded-4xl"
+          >
+            <img
+              src="/images/cafeteria.jpg"
+              className="w-full h-full object-cover"
+            />
 
-          {/* Overlay couleur thème CAFÉ */}
-          <div
-            className="absolute inset-0 backdrop-blur-[1px]"
-            style={{ backgroundColor: "rgba(92,58,33,0.45)" }} // var(--color-primary café)
-          />
+            {/* Overlay couleur thème CAFÉ */}
+            <div
+              className="absolute inset-0 backdrop-blur-[1px]"
+              style={{ backgroundColor: "rgba(92,58,33,0.45)" }} // var(--color-primary café)
+            />
 
-          <div className="absolute  bottom-[50%] right-[25%] flex flex-col">
-            <h2 className="text-white text-4xl md:text-5xl  font-extrabold mb-3 drop-shadow-xl">
-              Nos Cafétérias
-            </h2>
-
-            <Link
-              to="/cafeterias"
-              className="px-6 py-2 rounded-full text-lg font-semibold transition text-center hover:scale-105"
-              style={{
-                backgroundColor: "var(--color-accent)",
-                color: "white",
-              }}
-            >
+            <div className="absolute  bottom-[50%] right-[25%] flex flex-col">
+              <h2 className="text-white text-4xl md:text-5xl  font-extrabold mb-3 drop-shadow-xl">
+                Nos Cafétérias
+              </h2>
               Commander
-            </Link>
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </Link>
       </section>
 
       {/* ===================== CTA END ===================== */}

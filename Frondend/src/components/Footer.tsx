@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../motion/variants";
+
 const Footer = () => {
   return (
     <footer
@@ -8,7 +11,10 @@ const Footer = () => {
       }}
     >
       {/* LOGO CENTRE */}
-      <div className="flex flex-col items-center md:items-start gap-3">
+      <motion.div
+        variants={fadeUp}
+        className="flex flex-col items-center md:items-start gap-3"
+      >
         <img
           src="/images/logo.png"
           alt="Logo Food Ynvést"
@@ -23,7 +29,7 @@ const Footer = () => {
         <p className="text-sm opacity-80 text-center md:text-left">
           Traiteur & Cafétérias professionnelles
         </p>
-      </div>
+      </motion.div>
 
       {/* LIENS */}
       <div className="flex flex-col items-center md:items-start gap-2 text-sm opacity-90">
