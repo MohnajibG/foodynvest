@@ -71,6 +71,14 @@ const Modal: FC<ModalProps> = ({
                 ))}
               </div>
             </div>
+            <div className="text-center">
+              <Link
+                to="/precommande"
+                className="mt-6 inline-block px-6 py-2 rounded-full text-lg font-semibold transition hover:scale-105 bg-[#50741f] text-white "
+              >
+                Précommander
+              </Link>
+            </div>
 
             <button
               className="absolute top-4 right-4 text-gray-500 hover:text-black text-xl"
@@ -180,7 +188,7 @@ const Cafeterias = () => {
         </motion.p>
 
         <Link
-          to="/cafeterias"
+          to="/precommande"
           className="mt-10 px-10 py-2 rounded-full text-lg font-semibold transition hover:scale-105 bg-[#50741f] text-white"
         >
           Précommander
