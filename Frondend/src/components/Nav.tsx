@@ -9,11 +9,11 @@ const NavDesktop = () => {
       <Link className="hover:text-color-accent transition" to="/">
         HOME
       </Link>
-      <Link className="hover:text-color-accent transition" to="/cafeterias">
-        CAFETERIAS
-      </Link>
       <Link className="hover:text-color-accent transition" to="/traiteur">
         TRAITEUR
+      </Link>
+      <Link className="hover:text-color-accent transition" to="/cafeterias">
+        CAFETERIAS
       </Link>
       <Link className="hover:text-color-accent transition" to="/contact">
         CONTACT
